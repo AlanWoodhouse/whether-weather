@@ -1,0 +1,49 @@
+---
+layout: layouts/base.njk
+title: Berlin | Whether Weather
+permalink: /cities/berlin/
+---
+
+<style>
+  body {
+    background: url('/images/berlin.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  .section { background-color: rgba(255,255,255,0.9); border-radius: 12px; }
+</style>
+
+<div class="columns is-vcentered">
+  <div class="column is-6">
+    <h1 class="title is-1">Berlin</h1>
+    <p class="subtitle is-4">Today</p>
+    <div class="has-text-centered">
+      <span class="icon weather-icon has-text-warning"><i class="fas fa-sun"></i></span>
+      <p class="title is-4 mt-2">Sunny</p>
+    </div>
+  </div>
+  <div class="column is-6">
+    <div class="black-box p-5 has-text-centered">
+      <p class="is-size-5">Right Now</p>
+      <p class="title is-1 has-text-white">11°C</p>
+      <p class="subtitle is-5 has-text-grey-light">10 km/h <i class="fas fa-wind"></i></p>
+    </div>
+  </div>
+</div>
+
+<div class="columns mt-4">
+  <div class="column is-6"><div class="black-box p-4 has-text-centered"><p>Max Temp</p><p class="title is-3 has-text-white">12°C</p></div></div>
+  <div class="column is-6"><div class="black-box p-4 has-text-centered"><p>Max Wind</p><p class="title is-3 has-text-white">15 km/h <i class="fas fa-wind"></i></p></div></div>
+</div>
+
+<h2 class="title is-4 mt-6">7-Day Forecast</h2>
+<div class="columns is-mobile is-multiline">
+  <div class="column is-2"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Today</p><i class="fas fa-sun has-text-warning"></i><p>6°C 12°C</p></div></div>
+  <div class="column is-2"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Mon</p><i class="fas fa-cloud-sun has-text-warning"></i><p>5°C 11°C</p></div></div>
+  <div class="column is-2"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Tue</p><i class="fas fa-cloud has-text-warning"></i><p>4°C 10°C</p></div></div>
+  <div class="column is-2"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Wed</p><i class="fas fa-cloud-rain has-text-warning"></i><p>6°C 13°C</p></div></div>
+  <div class="column is-2"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Thu</p><i class="fas fa-sun has-text-warning"></i><p>7°C 14°C</p></div></div>
+  <div class="column is-2"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Fri</p><i class="fas fa-cloud-sun has-text-warning"></i><p>6°C 12°C</p></div></div>
+  <div class="column is-2"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Sat</p><i class="fas fa-sun has-text-warning"></i><p>5°C 13°C</p></div></div>
+</div>
+
+<p class="mt-5"><a href="/" class="button is-info">← Back to Dashboard</a></p>

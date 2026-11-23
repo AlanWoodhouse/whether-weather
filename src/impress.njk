@@ -1,0 +1,42 @@
+---
+layout: layouts/base.njk
+title: What to Wear | Whether Weather
+permalink: /impress/
+---
+
+<h1 class="title is-2">What Should You Wear?</h1>
+<p class="subtitle">Select a city for a clothing recommendation.</p>
+
+<div class="field">
+  <div class="select is-medium">
+    <select id="city">
+      <option value="11,Sunny,10">Berlin (11°C, Sunny)</option>
+      <option value="9,Cloudy,18">London (9°C, Cloudy)</option>
+      <option value="13,Partly Cloudy,8">Paris (13°C, Partly Cloudy)</option>
+      <option value="-2,Snow,25">Tromsø (-2°C, Snow)</option>
+      <option value="4,Cloudy,14">Vilnius (4°C, Cloudy)</option>
+      <option value="16,Sunny,6">Zagreb (16°C, Sunny)</option>
+    </select>
+  </div>
+  <button class="button is-info is-medium ml-3" onclick="recommend()">Get Recommendation</button>
+</div>
+
+<div id="result" class="box mt-5" style="display:none;">
+  <p id="advice" class="title is-4"></p>
+</div>
+
+<script>
+function recommend() {
+  const [temp, condition, wind] = document.getElementById('city').value.split(',');
+  const t = parseInt(temp);
+  let msg = "";
+  if (t <= 0) msg = "Heavy winter coat, gloves and hat needed.";
+  else if (t <= 8) msg = "Warm coat and layers recommended.";
+  else if (t <= 14) msg = "Light jacket or sweater is fine.";
+  else msg = "T-shirt weather!";
+  if (condition.includes("Rain") || condition.includes("Snow")) msg += " Bring something waterproof.";
+  if (parseInt(wind) > 15) msg += " It's windy.";
+  document.getElementById('advice').textContent = msg;
+  document.getElementById('result').style.display = 'block';
+}
+</script>
