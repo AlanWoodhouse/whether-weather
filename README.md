@@ -1,4 +1,4 @@
-# Whether Weather (No JSON version)
+# Whether Weather
 
 All weather data is hardcoded directly in the templates.
 
@@ -11,6 +11,5 @@ npm start
 Open http://localhost:8080
 
 ## Notes
-- No `_data/weather.json` file is used.
 - Each city has its own file in `src/cities/`.
 - Add your own images to `src/images/` named berlin.jpg, london.jpg, etc.
