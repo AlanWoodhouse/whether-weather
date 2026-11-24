@@ -12,7 +12,7 @@ permalink: /cities/paris/
 <div class="columns is-vcentered">
   <div class="column is-6">
     <h1 class="title is-1">Paris</h1>
-    <p class="subtitle is-4">Today</p>
+    <p class="subtitle is-4">Today - <span class="local-time">Local Time: <span id="local-time"></span></span> (UTC+1)</p>
     <div class="has-text-centered">
       <span class="icon weather-icon has-text-warning"><i class="fas fa-cloud-sun"></i></span>
       <p class="title is-4 mt-2">Partly Cloudy</p>
@@ -26,6 +26,21 @@ permalink: /cities/paris/
     </div>
   </div>
 </div>
+
+<script>
+    function updateTime() {
+        const now = new Date();
+        const parisTime = new Intl.DateTimeFormat("en-GB", {
+            timeZone: "Europe/Paris",
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit"
+        }).format(now);
+        document.getElementById("local-time").textContent = parisTime;
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+</script>
 
 <div class="columns mt-4">
   <div class="column is-6"><div class="black-box p-4 has-text-centered"><p>Max Temp</p><p class="title is-3 has-text-white">15°C</p></div></div>

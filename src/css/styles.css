@@ -1,4 +1,4 @@
 .city-card { transition: transform 0.2s; }
 .city-card:hover { transform: translateY(-4px); }
-.black-box { background: #1a1a1a; color: white; border-radius: 8px; }
+.black-box { background: rgba(0,0,0,0.55); color: white; border-radius: 8px; }
 .weather-icon { font-size: 3rem; }

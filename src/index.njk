@@ -3,8 +3,8 @@ layout: layouts/base.njk
 title: Dashboard | Whether Weather
 ---
 
-<h1 class="title is-2">Dashboard</h1>
-<p class="subtitle is-5 has-text-grey">Today</p>
+<h1 class="title is-2">Welcome to Whether Weather</h1>
+<p class="subtitle is-5 has-text-grey"><span id="today-date"></span></p>
 
 <div class="columns is-multiline">
   <div class="column is-4">
@@ -13,7 +13,7 @@ title: Dashboard | Whether Weather
         <div class="card-content has-text-centered">
           <span class="icon weather-icon has-text-warning"><i class="fas fa-sun"></i></span>
           <p class="title is-4 has-text-white mt-3">Berlin</p>
-          <p class="subtitle is-6 has-text-grey-light">11°C | 12°C</p>
+          <p class="subtitle is-6 has-text-grey-light">Min 11°C | Max 16°C</p>
         </div>
       </div>
     </a>
@@ -24,7 +24,7 @@ title: Dashboard | Whether Weather
         <div class="card-content has-text-centered">
           <span class="icon weather-icon has-text-warning"><i class="fas fa-cloud"></i></span>
           <p class="title is-4 has-text-white mt-3">London</p>
-          <p class="subtitle is-6 has-text-grey-light">9°C | 11°C</p>
+          <p class="subtitle is-6 has-text-grey-light">Min 9°C | Max 14°C</p>
         </div>
       </div>
     </a>
@@ -35,18 +35,18 @@ title: Dashboard | Whether Weather
         <div class="card-content has-text-centered">
           <span class="icon weather-icon has-text-warning"><i class="fas fa-cloud-sun"></i></span>
           <p class="title is-4 has-text-white mt-3">Paris</p>
-          <p class="subtitle is-6 has-text-grey-light">13°C | 15°C</p>
+          <p class="subtitle is-6 has-text-grey-light">Min 13°C | Max 18°C</p>
         </div>
       </div>
     </a>
   </div>
   <div class="column is-4">
-    <a href="/cities/tromso/">
+    <a href="/cities/rome/">
       <div class="card city-card black-box">
         <div class="card-content has-text-centered">
           <span class="icon weather-icon has-text-warning"><i class="fas fa-snowflake"></i></span>
-          <p class="title is-4 has-text-white mt-3">Tromsø</p>
-          <p class="subtitle is-6 has-text-grey-light">-2°C | 1°C</p>
+          <p class="title is-4 has-text-white mt-3">Rome</p>
+          <p class="subtitle is-6 has-text-grey-light">Min -2°C | Max 3°C</p>
         </div>
       </div>
     </a>
@@ -57,7 +57,7 @@ title: Dashboard | Whether Weather
         <div class="card-content has-text-centered">
           <span class="icon weather-icon has-text-warning"><i class="fas fa-cloud"></i></span>
           <p class="title is-4 has-text-white mt-3">Vilnius</p>
-          <p class="subtitle is-6 has-text-grey-light">4°C | 6°C</p>
+          <p class="subtitle is-6 has-text-grey-light">Min 4°C | Max 9°C</p>
         </div>
       </div>
     </a>
@@ -68,9 +68,22 @@ title: Dashboard | Whether Weather
         <div class="card-content has-text-centered">
           <span class="icon weather-icon has-text-warning"><i class="fas fa-sun"></i></span>
           <p class="title is-4 has-text-white mt-3">Zagreb</p>
-          <p class="subtitle is-6 has-text-grey-light">16°C | 18°C</p>
+          <p class="subtitle is-6 has-text-grey-light">Min 16°C | Max 21°C</p>
         </div>
       </div>
     </a>
   </div>
 </div>
+
+<script>
+    const today = new Date();
+
+    const formattedDate = today.toLocaleDateString("en-GB", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+    });
+
+    document.getElementById("today-date").textContent = formattedDate;
+</script>
