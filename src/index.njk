@@ -1,19 +1,30 @@
 ---
 layout: layouts/base.njk
 title: Dashboard | Whether Weather
+fullWidth: true
 ---
 
-<h1 class="title is-2">Welcome to Whether Weather</h1>
-<p class="subtitle is-5 has-text-grey"><span id="today-date"></span></p>
+<div class="home-background">
 
-<div class="columns is-multiline">
+<video class="home-video" autoplay muted loop playsinline>
+ <source src="/images/whetherweathervideo.mp4" type="video/mp4">
+</video>
+
+ <div class="home-content">
+
+  <div class="container">
+
+<h1 class="title is-2">Welcome to Whether Weather</h1>
+<p class="subtitle is-4"><span id="today-date"></span></p>
+
+<div class="columns is-multiline city-grid">
   <div class="column is-4">
     <a href="/cities/berlin/">
       <div class="card city-card black-box">
         <div class="card-content has-text-centered">
           <span class="icon weather-icon has-text-warning"><i class="fas fa-sun"></i></span>
           <p class="title is-4 has-text-white mt-3">Berlin</p>
-          <p class="subtitle is-6 has-text-grey-light">Min 11°C | Max 16°C</p>
+          <p class="subtitle is-6 has-text-white">Min 11°C | Max 16°C</p>
         </div>
       </div>
     </a>
@@ -24,7 +35,7 @@ title: Dashboard | Whether Weather
         <div class="card-content has-text-centered">
           <span class="icon weather-icon has-text-warning"><i class="fas fa-cloud"></i></span>
           <p class="title is-4 has-text-white mt-3">London</p>
-          <p class="subtitle is-6 has-text-grey-light">Min 9°C | Max 14°C</p>
+          <p class="subtitle is-6 has-text-white">Min 9°C | Max 14°C</p>
         </div>
       </div>
     </a>
@@ -35,7 +46,7 @@ title: Dashboard | Whether Weather
         <div class="card-content has-text-centered">
           <span class="icon weather-icon has-text-warning"><i class="fas fa-cloud-sun"></i></span>
           <p class="title is-4 has-text-white mt-3">Paris</p>
-          <p class="subtitle is-6 has-text-grey-light">Min 13°C | Max 18°C</p>
+          <p class="subtitle is-6 has-text-white">Min 13°C | Max 18°C</p>
         </div>
       </div>
     </a>
@@ -46,7 +57,7 @@ title: Dashboard | Whether Weather
         <div class="card-content has-text-centered">
           <span class="icon weather-icon has-text-warning"><i class="fas fa-snowflake"></i></span>
           <p class="title is-4 has-text-white mt-3">Rome</p>
-          <p class="subtitle is-6 has-text-grey-light">Min -2°C | Max 3°C</p>
+          <p class="subtitle is-6 has-text-white">Min -2°C | Max 3°C</p>
         </div>
       </div>
     </a>
@@ -57,7 +68,7 @@ title: Dashboard | Whether Weather
         <div class="card-content has-text-centered">
           <span class="icon weather-icon has-text-warning"><i class="fas fa-cloud"></i></span>
           <p class="title is-4 has-text-white mt-3">Vilnius</p>
-          <p class="subtitle is-6 has-text-grey-light">Min 4°C | Max 9°C</p>
+          <p class="subtitle is-6 has-text-white">Min 4°C | Max 9°C</p>
         </div>
       </div>
     </a>
@@ -68,22 +79,37 @@ title: Dashboard | Whether Weather
         <div class="card-content has-text-centered">
           <span class="icon weather-icon has-text-warning"><i class="fas fa-sun"></i></span>
           <p class="title is-4 has-text-white mt-3">Zagreb</p>
-          <p class="subtitle is-6 has-text-grey-light">Min 16°C | Max 21°C</p>
+          <p class="subtitle is-6 has-text-white">Min 16°C | Max 21°C</p>
         </div>
       </div>
     </a>
   </div>
 </div>
 
+   </div>
+
+  </div> 
+
+ </div>
+
+</div>
+
 <script>
-    const today = new Date();
 
-    const formattedDate = today.toLocaleDateString("en-GB", {
-        weekday: "long",
-        day: "numeric",
-        month: "long",
-        year: "numeric"
-    });
+ const today = new Date();
 
-    document.getElementById("today-date").textContent = formattedDate;
+ const formattedDate = today.toLocaleDateString("en-GB", {
+
+  weekday: "long",
+
+  day: "numeric",
+
+  month: "long",
+
+  year: "numeric"
+
+ });
+
+ document.getElementById("today-date").textContent = formattedDate;
+
 </script>

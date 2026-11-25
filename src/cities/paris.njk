@@ -5,57 +5,100 @@ permalink: /cities/paris/
 ---
 
 <style>
-  body { background: url('/images/paris.jpg') no-repeat center center fixed; background-size: cover; }
-  .section { background-color: rgba(255,255,255,0.9); border-radius: 12px; }
+ body {
+ background: url('/images/parisday.jpg') no-repeat center center fixed;
+ background-size: cover;
+ }
+
+ .section {background-color: rgba(255,255,255,0.1); border-radius: 12px; }
 </style>
 
 <div class="columns is-vcentered">
-  <div class="column is-6">
-    <h1 class="title is-1">Paris</h1>
-    <p class="subtitle is-4">Today - <span class="local-time">Local Time: <span id="local-time"></span></span> (UTC+1)</p>
-    <div class="has-text-centered">
-      <span class="icon weather-icon has-text-warning"><i class="fas fa-cloud-sun"></i></span>
-      <p class="title is-4 mt-2">Partly Cloudy</p>
-    </div>
-  </div>
-  <div class="column is-6">
-    <div class="black-box p-5 has-text-centered">
-      <p class="is-size-5">Right Now</p>
-      <p class="title is-1 has-text-white">13°C</p>
-      <p class="subtitle is-5 has-text-grey-light">8 km/h <i class="fas fa-wind"></i></p>
-    </div>
-  </div>
+
+ <div class="column is-6">
+
+ <h1 class="title is-1"> Paris </h1>
+
+ <p class="subtitle is-4"><span class="local-time">Local Time: <span id="local-time"></span></span></p>
+
+ <div class="has-text-centered">
+
+ <span class="icon weather-icon has-text-warning"><i class="fas fa-cloud-sun fa-2x"></i></span>
+
+ <p class="title is-2 mt-2">Partly Cloudy</p>
+
+ </div>
+
+ </div>
+
+ <div class="column is-6">
+
+ <div class="black-box p-5 has-text-centered">
+
+ <p class="is-size-5">Right Now</p>
+
+ <p class="title is-1 has-text-white">13°C</p>
+
+ <p class="subtitle is-5 has-text-grey-light">8 km/h <i class="fas fa-wind"></i></p>
+
+ </div>
+
+ </div>
+
 </div>
 
 <script>
-    function updateTime() {
-        const now = new Date();
-        const parisTime = new Intl.DateTimeFormat("en-GB", {
-            timeZone: "Europe/Paris",
-            hour: "2-digit",
-            minute: "2-digit",
-            second: "2-digit"
-        }).format(now);
-        document.getElementById("local-time").textContent = parisTime;
-    }
-    updateTime();
-    setInterval(updateTime, 1000);
+
+ function updateTime() {
+
+ const now = new Date();
+
+ const parisTime = new Intl.DateTimeFormat("en-GB", {
+
+ timeZone: "Europe/Paris",
+
+ hour: "2-digit",
+
+ minute: "2-digit",
+
+ second: "2-digit"
+
+ }).format(now);
+
+ document.getElementById("local-time").textContent = parisTime;
+
+ }
+
+ updateTime();
+
+ setInterval(updateTime, 1000);
+
 </script>
 
 <div class="columns mt-4">
-  <div class="column is-6"><div class="black-box p-4 has-text-centered"><p>Max Temp</p><p class="title is-3 has-text-white">15°C</p></div></div>
-  <div class="column is-6"><div class="black-box p-4 has-text-centered"><p>Max Wind</p><p class="title is-3 has-text-white">12 km/h <i class="fas fa-wind"></i></p></div></div>
+
+ <div class="column is-6"><div class="black-box p-4 has-text-centered"><p>Max Temp</p><p class="title is-3 has-text-white">15°C</p></div></div>
+
+ <div class="column is-6"><div class="black-box p-4 has-text-centered"><p>Max Wind</p><p class="title is-3 has-text-white">12 km/h <i class="fas fa-wind"></i></p></div></div>
+
 </div>
 
-<h2 class="title is-4 mt-6">7-Day Forecast</h2>
+<h2 class="title is-4 mt-6">This Week in Paris</h2>
+
 <div class="columns is-mobile is-multiline">
-  <div class="column is-2"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Today</p><i class="fas fa-cloud-sun has-text-warning"></i><p>8°C 15°C</p></div></div>
-  <div class="column is-2"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Mon</p><i class="fas fa-sun has-text-warning"></i><p>9°C 16°C</p></div></div>
-  <div class="column is-2"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Tue</p><i class="fas fa-cloud has-text-warning"></i><p>7°C 13°C</p></div></div>
-  <div class="column is-2"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Wed</p><i class="fas fa-cloud-rain has-text-warning"></i><p>8°C 14°C</p></div></div>
-  <div class="column is-2"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Thu</p><i class="fas fa-sun has-text-warning"></i><p>10°C 17°C</p></div></div>
-  <div class="column is-2"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Fri</p><i class="fas fa-cloud-sun has-text-warning"></i><p>9°C 15°C</p></div></div>
-  <div class="column is-2"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Sat</p><i class="fas fa-sun has-text-warning"></i><p>8°C 16°C</p></div></div>
-</div>
 
-<p class="mt-5"><a href="/" class="button is-info">← Back to Dashboard</a></p>
+ <div class="column is-3"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Today</p><i class="fas fa-cloud-sun has-text-warning"></i><p>Min 8°C | Max 15°C</p></div></div>
+
+ <div class="column is-3"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Mon</p><i class="fas fa-sun has-text-warning"></i><p>Min 9°C | Max 16°C</p></div></div>
+
+ <div class="column is-3"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Tue</p><i class="fas fa-cloud has-text-warning"></i><p>Min 7°C | Max 13°C</p></div></div>
+
+ <div class="column is-3"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Wed</p><i class="fas fa-cloud-rain has-text-warning"></i><p>Min 8°C | Max 14°C</p></div></div>
+
+ <div class="column is-3"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Thu</p><i class="fas fa-sun has-text-warning"></i><p>Min 10°C | Max 17°C</p></div></div>
+
+ <div class="column is-3"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Fri</p><i class="fas fa-cloud-sun has-text-warning"></i><p>Min 9°C | Max 15°C</p></div></div>
+
+ <div class="column is-3"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Sat</p><i class="fas fa-sun has-text-warning"></i><p>Min 8°C | Max 16°C</p></div></div>
+
+ <div class="column is-3"><div class="black-box p-3 has-text-centered"><p class="is-size-7">Sun</p><i class="fas fa-sun has-text-warning"></i><p>Min 9
